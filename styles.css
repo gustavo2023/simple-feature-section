@@ -131,7 +131,7 @@ header {
   justify-content: center;
   text-align: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 h1 {
@@ -229,4 +229,30 @@ footer {
 a {
   color: var(--antiflash-white);
   text-decoration: none;
+}
+
+@media (min-width: 64rem) and (max-width: 79rem) {
+  header {
+    max-width: 30rem;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
+@media (min-width: 80rem) {
+  header {
+    max-width: 30rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
